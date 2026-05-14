@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
+
+education:
+  - institution: Guru Tegh Bahadur Institute of Technology
+    url: null
+    area: Information Technology
+    studyType: Bachelor of Technology
+    startDate: 2021-08-01
+    endDate: 2025-07-01
+    location: Rajouri, New Delhi, India
+    honors:
+      - "CGPA: 8.4/10"
+    courses:
+      - Data Structures & Algorithms
+      - Operating Systems
+      - Database Management Systems
+      - Computer Networks
+      - Software Engineering
+      - Distributed Systems
+    highlights:
+      - Focused on backend systems, distributed architecture, and infrastructure tooling.
+      - Built full-stack, mobile, and infrastructure-focused projects emphasizing modularity and reproducibility.

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
+
+projects:
+  - name: Organization-Centric Project Management System (OCPMS)
+    url: null
+    affiliation: Personal Project
+    startDate: 2024-08-01
+    endDate: present
+    highlights:
+      - Designed and implemented a cloud-native document ingestion and processing platform using React, Spring Boot, and AWS services.
+      - Architected asynchronous processing workflows using Amazon SQS workers, SNS event notifications, and DynamoDB metadata persistence.
+      - Implemented secure JWT-based authentication and authorization with AWS Cognito integration and Spring Security filters.
+      - Developed modular backend architecture following controller-service-repository separation for maintainability and scalability.
+      - Integrated S3 object storage with presigned URL generation, metadata lifecycle management, and asynchronous background processing.
+      - Built queue-driven processing pipelines for document validation, status tracking, and failure handling workflows.
+      - "Tech Stack: React, Spring Boot, AWS S3, DynamoDB, SQS, SNS, Cognito, Java, Maven"
+
+  - name: NoteQuest
+    url: https://github.com/hamburg1r/NoteQuest
+    affiliation: Personal Project
+    startDate: 2025-01-01
+    endDate: present
+    highlights:
+      - Developed an offline-first Flutter productivity application for markdown note-taking, task management, and calendar-based scheduling.
+      - Architected reactive state management using Riverpod with immutable Freezed data models for predictable application state.
+      - Designed local persistence architecture using Hive for efficient offline storage and retrieval of structured user data.
+      - Implemented markdown-enabled document workflows with attachment support for images, PDFs, and linked resources.
+      - Structured the application into modular feature-oriented layers to improve maintainability and scalability.
+      - Integrated dynamic theming, advanced navigation flows, and reusable UI components for responsive user experience.
+      - "Tech Stack: Flutter, Dart, Riverpod, Hive, Freezed, Table Calendar"
+
+  - name: NixOS System Configuration & Automation
+    url: https://github.com/hamburg1r/NixOS
+    affiliation: Personal Infrastructure Project
+    startDate: 2024-01-01
+    endDate: present
+    highlights:
+      - Built a declarative and reproducible Linux infrastructure configuration using NixOS, Flakes, and Home Manager.
+      - Modularized system configuration into reusable host, user, and package layers for maintainability and portability.
+      - Automated developer environment provisioning, package management, and desktop configuration using Nix expressions and overlays.
+      - Managed multi-environment system consistency with atomic upgrades and rollback support through functional package management.
+      - Configured advanced Linux desktop environments including Hyprland, Sway, i3, and Niri with centralized theming and workflow automation.
+      - Developed custom Neovim tooling with integrated LSP, Treesitter, debugging, fuzzy finding, and shell automation.
+      - Integrated CI workflows using GitHub Actions and Cachix for automated configuration validation and reproducible builds.
+      - "Tech Stack: Nix, NixOS, Flakes, Home Manager, Bash, GitHub Actions, Hydra"
+
+  - name: SmartQuiz
+    url: https://github.com/hamburg1r/capston
+    affiliation: Academic Team Project
+    startDate: 2023-08-01
+    endDate: 2024-01-01
+    highlights:
+      - Developed a modular Android quiz application using Jetpack Compose and MVVM architecture.
+      - Implemented reactive state management using Kotlin Flow and ViewModels for real-time UI updates.
+      - Built Room-based local persistence layer for quizzes, user history, interests, and performance tracking.
+      - Integrated Firebase Authentication with Google Sign-In and session management workflows.
+      - Structured navigation using feature-oriented Compose navigation graphs and dependency injection with Hilt.
+      - Added analytics dashboards and chart-based visualizations for quiz performance monitoring.
+      - "Tech Stack: Kotlin, Jetpack Compose, Room, Hilt, Firebase, Coroutines"

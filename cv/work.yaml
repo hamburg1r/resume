@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
+
+work:
+  - organization: Encora
+    url: https://www.encora.com
+    location: New Delhi, India
+    positions:
+      - position: Software Engineer Trainee
+        startDate: 2025-08-04
+        endDate: 2026-04-23
+        highlights:
+          - Completed intensive enterprise training focused on Spring Boot, AWS cloud services, React, and Android development with Kotlin.
+          - Developed backend and frontend applications using modern Java and JavaScript ecosystems.
+          - Worked with REST APIs, authentication workflows, and cloud-native application development concepts.
+          - Strengthened understanding of scalable backend architecture, distributed systems, and full-stack engineering practices.
+
+  - organization: Coforge
+    url: https://www.coforge.com
+    location: New Delhi, India
+    positions:
+      - position: Software Engineer
+        startDate: 2026-04-24
+        endDate: present
+        highlights:
+          - Participating in internal engineering readiness and enterprise technology enablement programs following organizational integration activities.
+          - Enhancing expertise in backend engineering, cloud infrastructure, and scalable system design.
+          - Working with modern development workflows, collaborative engineering practices, and enterprise software delivery processes.

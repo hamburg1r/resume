@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
+
+skills:
+  - category: Backend & Cloud
+    skills:
+      - Java
+      - Spring Boot
+      - REST APIs
+      - JWT Authentication
+      - PostgreSQL
+      - MongoDB
+      - Redis
+      - AWS S3
+      - AWS DynamoDB
+      - AWS SQS
+      - AWS SNS
+      - AWS Cognito
+
+  - category: Mobile & Frontend
+    skills:
+      - Flutter
+      - Dart
+      - React
+      - Kotlin
+      - Jetpack Compose
+      - Riverpod
+      - Hive
+
+  - category: Infrastructure & DevOps
+    skills:
+      - Nix
+      - NixOS
+      - Nix Flakes
+      - Home Manager
+      - GitHub Actions
+      - Docker
+      - Linux System Administration
+
+  - category: Architecture & Concepts
+    skills:
+      - Distributed Systems
+      - Event-Driven Architecture
+      - Offline-First Design
+      - System Design
+      - State Management
+      - Reproducible Environments
+      - Data Structures & Algorithms
+
+  - category: Languages & Tooling
+    skills:
+      - Python
+      - C
+      - C++
+      - Bash
+      - Lua
+      - Git
+      - Maven
+      - Gradle
+      - Neovim

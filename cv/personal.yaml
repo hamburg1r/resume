@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
+
+personal:
+  name: Shantnu Biswas
+  email: shantnuprofid@gmail.com
+  phone: "(+91) 82874-40679"
+  url: null
+  titles:
+    - Software Engineer
+    - Backend & Cloud Engineer
+    - Infrastructure & Platform Engineering
+  location:
+    city: New Delhi
+    region: Delhi
+    country: India
+  profiles:
+    - network: GitHub
+      username: Shantnu Biswas
+      url: https://github.com/hamburg1r
+    - network: LinkedIn
+      username: Shantnu Biswas
+      url: https://linkedin.com/in/shantnu-biswas-530126246

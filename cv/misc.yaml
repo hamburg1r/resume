@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
+
+certificates:
+  - name: GFG Cloud Bootcamp Sponsored by Google Developers
+    date: 2023-01-01
+    issuer: GeeksforGeeks
+    url: null
+    id: null
+
+awards:
+  - title: GATE 2025
+    url: null
+    date: 2025-03-01
+    issuer: Graduate Aptitude Test in Engineering
+    location: India
+    highlights:
+      - "AIR 11666 with GATE score of 404."
+
+languages:
+  - language: English
+    fluency: Professional proficiency
+  - language: Hindi
+    fluency: Native proficiency
+
+interests:
+  - Linux
+  - Distributed Systems
+  - Backend Architecture
+  - Infrastructure Automation
+  - Gaming
+  - Open Source Software
+
+affiliations: null
+  # - organization: null
+  #   position: null
+  #   location: null
+  #   url: null
+  #   startDate: null
+  #   endDate: null
+  #   highlights: null
+
+references: null
+  # - name: null
+  #   reference: null
+  #   url: null
+
+publications: null
