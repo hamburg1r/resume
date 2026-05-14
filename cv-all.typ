@@ -33,7 +33,7 @@
     // add custom document style rules here
     set page(
         paper: "us-letter", // a4, us-letter
-        numbering: "1 / 1",
+        numbering: none,
         number-align: center, // left, center, right
         margin: 1.25cm, // 1.25cm, 1.87cm, 2.5cm
     )
@@ -57,13 +57,17 @@
 #show: doc => cvinit(doc)
 
 #cvheading(cvdata, uservars)
-#cvwork(cvdata)
 #cveducation(cvdata)
-#cvaffiliations(cvdata)
+
+#cvwork(cvdata)
 #cvprojects(cvdata)
-#cvawards(cvdata)
-#cvcertificates(cvdata)
-#cvpublications(cvdata)
+
+#cvaffiliations(cvdata)
 #cvskills(cvdata)
-#cvreferences(cvdata)
+
+
+// #cvawards(cvdata)
+// #cvpublications(cvdata)
+// #cvcertificates(cvdata)
+// #cvreferences(cvdata)
 // #endnote(uservars)

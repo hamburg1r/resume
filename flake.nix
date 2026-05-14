@@ -69,34 +69,44 @@
       build-drv = typixLib.buildTypstProject (commonArgs
         // {
           inherit src unstable_typstPackages;
-          typstSource = "default.typ";
+          typstSource = "cv-all.typ";
         });
 
       # Compile a Typst project, and then copy the result
       # to the current directory
-      default-cv = typixLib.buildTypstProjectLocal (commonArgs
+      cv-all-drv = typixLib.buildTypstProjectLocal (commonArgs
         // {
           inherit src unstable_typstPackages;
-          typstSource = "default.typ";
+          typstSource = "cv-all.typ";
+
+        });
+
+      cv-in-drv = typixLib.buildTypstProjectLocal (commonArgs
+        // {
+          inherit src unstable_typstPackages;
+          typstSource = "cv-in.typ";
 
         });
 
       # Watch a project and recompile on changes
       watch-script = typixLib.watchTypstProject (commonArgs
         // {
-          typstSource = "*.typ";
+          typstSource = "cv-all.typ";
         });
     in {
       checks = {
-        inherit build-drv default-cv watch-script;
+        inherit build-drv cv-all-drv cv-in-drv watch-script;
       };
 
       packages.default = build-drv;
 
       apps = rec {
         default = watch;
-        build = flake-utils.lib.mkApp {
-          drv = default-cv;
+        cv-all = flake-utils.lib.mkApp {
+          drv = cv-all-drv;
+        };
+        cv-in = flake-utils.lib.mkApp {
+          drv = cv-in-drv;
         };
         watch = flake-utils.lib.mkApp {
           drv = watch-script;

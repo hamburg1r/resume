@@ -9,19 +9,20 @@ work:
         startDate: 2025-08-04
         endDate: 2026-04-23
         highlights:
-          - Completed intensive enterprise training focused on Spring Boot, AWS cloud services, React, and Android development with Kotlin.
-          - Developed backend and frontend applications using modern Java and JavaScript ecosystems.
-          - Worked with REST APIs, authentication workflows, and cloud-native application development concepts.
-          - Strengthened understanding of scalable backend architecture, distributed systems, and full-stack engineering practices.
+          - Delivered a cloud-native document processing platform integrating 5 AWS managed services (S3, SQS, SNS, DynamoDB, Cognito) with a 4-member team in under 2 weeks across 66 commits.
+          - Delivered an Android quiz application pre-seeded with 150 questions across 30 quizzes and 5 categories, built with a 4-member team in under 2 weeks.
+          - Implemented JWT-based authentication and authorization across 8 REST endpoints using Spring Security integrated with AWS Cognito.
+          - Built asynchronous document processing pipeline using SQS consumers and SNS event notifications, fully decoupling upload and processing workflows.
+          - Built dashboard UI widgets and navigation routing using Jetpack Compose and Hilt DI, integrating real-time Firebase data into a modular MVVM architecture across a 4-member team.
 
-  - organization: Coforge
-    url: https://www.coforge.com
-    location: New Delhi, India
-    positions:
-      - position: Software Engineer
-        startDate: 2026-04-24
-        endDate: present
-        highlights:
-          - Participating in internal engineering readiness and enterprise technology enablement programs following organizational integration activities.
-          - Enhancing expertise in backend engineering, cloud infrastructure, and scalable system design.
-          - Working with modern development workflows, collaborative engineering practices, and enterprise software delivery processes.
+  # - organization: Coforge
+  #   url: https://www.coforge.com
+  #   location: New Delhi, India
+  #   positions:
+  #     - position: Software Engineer
+  #       startDate: 2026-04-24
+  #       endDate: present
+  #       highlights:
+  #         - Participating in internal engineering readiness and enterprise technology enablement programs following organizational integration activities.
+  #         - Enhancing expertise in backend engineering, cloud infrastructure, and scalable system design.
+  #         - Working with modern development workflows, collaborative engineering practices, and enterprise software delivery processes.
