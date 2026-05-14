@@ -1,130 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
 
-# 2. Overuse of “Built”
-#
-# You still heavily repeat:
-#
-# Built
-# Designed
-# Implemented
-# Delivered
-#
-# This creates monotony.
-#
-# You need more varied engineering phrasing:
-#
-# Architected
-# Developed
-# Automated
-# Eliminated
-# Reduced
-# Enabled
-# Orchestrated
-# Secured
-# Streamlined
-#
-# Not for variety alone — for precision.
-
-# projects:
-#   - name: Document Processing System
-#     url: https://hamburg1r/capston
-#     affiliation: Personal Project
-#     startDate: 2025-01-01
-#     endDate: present
-#     highlights:
-#       - Built a 5-service AWS-integrated document processing platform with a
-#         4-member team, delivering across 31 Java source files in under 2 weeks.
-#       - Exposed 8 REST endpoints covering document upload, processing, status,
-#         and authentication workflows, secured via Spring Security and AWS Cognito
-#         JWT validation.
-#       - Designed SQS-driven async pipeline decoupling document upload from
-#         background processing, enabling independent scaling of each stage.
-#       - Implemented secure file upload and preview using S3 presigned URLs,
-#         eliminating direct server-side file handling.
-#       - Designed DynamoDB single-table schema tracking 4 document state
-#         transitions (QUEUED → PROCESSING → COMPLETED / FAILED) with timestamps
-#         and user association per document.
-#       - Achieved ~5–10 second end-to-end processing time per document covering
-#         file size extraction, word count, S3 upload, and async SQS/SNS pipeline
-#         trigger.
-#
-#   - name: NixOS System Configuration & Automation
-#     url: https://github.com/hamburg1r/nixos
-#     affiliation: Personal Infrastructure Project
-#     startDate: 2024-01-01
-#     endDate: present
-#     highlights:
-#       - Manages a fully declarative NixOS system across 192 Nix files spanning
-#         modularized host, user, and package layers, enabling reproducible
-#         provisioning from a single command.
-#       - Eliminated environment inconsistency across machines by declaratively
-#         pinning all 24 system dependencies via Nix Flakes, guaranteeing
-#         identical rebuilds across any system generation.
-#       - Automated complete developer environment setup including LSP servers for
-#         8 languages, shell tooling, and editor configuration via NixVim,
-#         reducing fresh system setup from hours to a single command.
-#       - Configured CI validation via GitHub Actions and binary caching via
-#         Cachix, ensuring every configuration change is buildable before merge.
-#       - Modularized configuration into reusable host and user layers, supporting
-#         atomic upgrades and instant rollback across 191 commits of iterative
-#         delivery.
-#
-#   - name: Organisation-Centric Project Management System (OCPMS)
-#     url: null
-#     affiliation: Personal Project
-#     startDate: 2024-08-01
-#     endDate: present
-#     highlights:
-#       - Built a full-stack project management platform across 26 JavaScript
-#         source files exposing 16 REST endpoints for task, project, and
-#         real-time chat workflows.
-#       - Replaced polling with SSE-based real-time chat, cutting unnecessary HTTP
-#         overhead while persisting full message history in MongoDB.
-#       - Implemented role-based auth using Passport.js and bcrypt across all 16
-#         API routes with admin, manager, and member permission levels.
-#       - Built Kanban task management with 3-stage lifecycle tracking (Todo →
-#         In Progress → Done), assignment workflows, and deadline-aware completion
-#         monitoring.
-#       - Developed analytics dashboards visualising task distribution, monthly
-#         creation trends, and late submission rates using MongoDB aggregation
-#         pipelines and Chart.js.
-#
-#   - name: NoteQuest
-#     url: https://hamburg1r/notequest
-#     affiliation: Personal Project
-#     startDate: 2025-01-01
-#     endDate: present
-#     highlights:
-#       - Built an offline-first Flutter productivity app across 18 Dart source
-#         files covering task management, markdown note-taking, and calendar
-#         scheduling with 100% feature availability independent of network state.
-#       - Implemented reactive state management using Riverpod across 10
-#         providers with Freezed-generated immutable models, enforcing
-#         compile-time state safety and eliminating runtime null errors.
-#       - Designed local persistence architecture using Hive across 4 data boxes
-#         (todos, markdowns, mainScreenTodos, documents), supporting hierarchical
-#         task relationships with subtask and parent linkage.
-#       - Implemented markdown-based document workflows with multi-type attachment
-#         handling (images, PDFs, links) and structured content management across
-#         feature-based modules.
-#
-#   - name: SmartQuiz
-#     url: https://github.com/LXXPK/Quiz-Android-App
-#     affiliation: Academic Team Project
-#     startDate: 2023-08-01
-#     endDate: 2024-01-01
-#     highlights:
-#       - Delivered a modular Android quiz application with a 4-member team in
-#         under 2 weeks, pre-seeded with 150 questions across 30 quizzes,
-#         5 categories, and 600 answer options.
-#       - Built dashboard UI widgets and navigation routing using Jetpack Compose
-#         and Hilt DI, integrating real-time Firebase data into a modular MVVM
-#         architecture.
-#       - Implemented reactive state management using Kotlin Flow and Coroutines,
-#         keeping all 150-question data operations off the main thread.
-#       - Built Room-based persistence layer for quiz history, user interests, and
-#         performance tracking with structured indexed queries across 600 stored
-#         answer options.
 projects:
   - name: Document Processing System
     url: https://github.com/hamburg1r/capston
@@ -132,97 +7,76 @@ projects:
     startDate: 2025-01-01
     endDate: present
     highlights:
-      - Architected a 5-service AWS document processing backend exposing 8 REST
-        endpoints across upload, processing, status, and auth workflows, secured
-        via Spring Security and AWS Cognito JWT validation.
-      - Designed SQS-driven async pipeline decoupling document ingestion from
-        background processing, enabling independent horizontal scaling of each stage.
-      - Implemented DynamoDB single-table schema tracking 4 document state transitions
-        (QUEUED → PROCESSING → COMPLETED / FAILED) with per-document timestamps
-        and user association.
-      - Eliminated direct server-side file handling by using S3 presigned URLs for
-        all upload and preview operations, reducing attack surface and server load.
-      # METRIC NEEDED: If you can estimate max concurrent uploads the system was
-      # designed to handle, or how many test documents were processed during development,
-      # add that here — e.g. "validated against X test documents during integration testing"
-      - Achieved ~5–10 second end-to-end processing latency per document across
-        file extraction, word count computation, S3 upload, and async SQS/SNS trigger.
- 
+      - Architected 5 AWS services (S3, SQS, SNS, DynamoDB, Cognito) behind 8 REST endpoints secured
+        with Spring Security and Cognito JWT validation.
+      - Built a single-table DynamoDB schema tracking 4 document states (QUEUED → PROCESSING →
+        COMPLETED/FAILED) with per-document timestamps and user association.
+      - Eliminated server-side file handling by using S3 presigned URLs for all uploads/previews,
+        reducing attack surface and server load.
+      # METRIC NEEDED: Max concurrent uploads handled or number of test documents validated during
+      # integration testing.
+      - Achieved 5–10s end-to-end processing latency per document, covering extraction, word count,
+        S3 upload, and async SQS/SNS trigger.
+
   - name: NixOS System Configuration & Automation
     url: https://github.com/hamburg1r/nixos
     affiliation: Personal Infrastructure Project
     startDate: 2024-01-01
     endDate: present
     highlights:
-      - Reduced fresh developer environment setup from hours to a single command by
-        building a fully declarative NixOS configuration with automated LSP servers
-        for 8 languages, shell tooling, and editor setup via NixVim.
-      - Pinned all 24 system dependencies via Nix Flakes, guaranteeing bit-for-bit
-        identical rebuilds across every system generation and eliminating
+      - Cut developer environment setup from hours to one command with a declarative NixOS config
+        (automated LSP, shell tooling, editor via NixVim for 8 languages).
+      - Pinned 24 dependencies with Nix Flakes for bit-for-bit reproducible rebuilds, eliminating
         environment drift.
-      - Configured CI validation via GitHub Actions and binary caching via Cachix,
-        ensuring every configuration change is verified buildable before merge.
-      - Modularized configuration into reusable host and user layers across 192 Nix
-        files, supporting atomic upgrades and instant rollback without manual
-        intervention.
-      # METRIC NEEDED: If you've ever timed an actual rebuild or rollback, add the
-      # duration here — even "sub-60-second rollback" would strengthen this bullet.
- 
+      - Enforced CI validation (GitHub Actions) and binary caching (Cachix) so every config change
+        is verified buildable before merge.
+      - Modularized configuration into reusable host/user layers (192 files), enabling atomic upgrades
+        and instant rollback with no manual steps.
+      # METRIC NEEDED: Actual rebuild or rollback time (e.g., “sub-60-second rollback”).
+
   - name: Organisation-Centric Project Management System (OCPMS)
     url: null
     affiliation: Personal Project
     startDate: 2024-08-01
     endDate: present
     highlights:
-      - Built a full-stack project management platform exposing 16 REST endpoints
-        across task, project, and real-time chat workflows, backed by MongoDB and
-        a Node.js/Express API.
-      - Replaced polling with SSE-based real-time chat, eliminating redundant HTTP
-        overhead while persisting full message history in MongoDB.
-      - Implemented role-based auth using Passport.js and bcrypt enforcing admin,
-        manager, and member permission levels across all 16 API routes.
-      - Built Kanban task management with 3-stage lifecycle tracking (Todo → In
-        Progress → Done), assignment workflows, and deadline-aware completion
-        monitoring.
-      # METRIC NEEDED: If you can estimate the number of aggregation pipeline stages
-      # or the complexity of the analytics (e.g. "3 aggregation pipelines across
-      # X collections"), mention it. Otherwise leave as-is.
-      - Developed analytics dashboards visualising task distribution, monthly
-        creation trends, and late submission rates using MongoDB aggregation
-        pipelines and Chart.js.
- 
+      - Built full-stack project management platform with 16 REST endpoints (tasks, projects, real-time
+        chat), backed by MongoDB and Node.js/Express.
+      - Replaced polling with SSE for real-time chat, removing redundant HTTP overhead while persisting
+        full message history in MongoDB.
+      - Implemented role-based auth (Passport.js, bcrypt) across admin, manager, member tiers on all
+        16 API routes.
+      - Tracked task lifecycle (Todo → In Progress → Done) with assignment workflows and deadline-aware
+        completion monitoring.
+      # METRIC NEEDED: Complexity of analytics pipelines (e.g., “3 aggregation pipelines across
+      # X collections”).
+      - Built analytics dashboards (task distribution, monthly trends, late submissions) using MongoDB
+        aggregation pipelines and Chart.js.
+
   - name: NoteQuest
     url: https://github.com/hamburg1r/notequest
     affiliation: Personal Project
     startDate: 2025-01-01
     endDate: present
     highlights:
-      - Built an offline-first Flutter productivity app with 100% feature
-        availability independent of network state, covering task management,
-        markdown note-taking, and calendar scheduling.
-      - Designed local persistence architecture using Hive across 4 typed data
-        boxes, supporting hierarchical task relationships with subtask and parent
-        linkage — no network dependency for any read or write operation.
-      - Enforced compile-time state safety using Riverpod and Freezed-generated
-        immutable models across 10 providers, eliminating runtime null errors.
-      # METRIC NEEDED: If NoteQuest is on the Play Store or has any download count
-      # or test users, add that here — even "published to Play Store" is worth stating.
-      - Implemented markdown document workflows with multi-type attachment handling
-        (images, PDFs, links) across feature-based modules.
- 
+      - Offline-first Flutter productivity app with full task, note, and calendar functionality
+        independent of network state.
+      - Designed local persistence with Hive (4 typed boxes) supporting hierarchical tasks
+        (subtasks/parent linkage) — zero network dependency for reads/writes.
+      - Enforced compile-time state safety via Riverpod and Freezed immutable models across 10
+        providers, eliminating runtime null errors.
+      # METRIC NEEDED: App store presence or user count (e.g., “published to Play Store, X downloads”).
+
   - name: SmartQuiz
     url: https://github.com/LXXPK/Quiz-Android-App
     affiliation: Academic Team Project
     startDate: 2023-08-01
     endDate: 2024-01-01
     highlights:
-      - Delivered a modular Android quiz app with a 4-member team in under 2 weeks,
-        pre-seeded with 150 questions across 30 quizzes and 5 categories.
-      - Kept all data operations off the main thread using Kotlin Flow and Coroutines,
-        ensuring zero UI jank across 150-question datasets and 600 stored answer options.
-      - Built Room-based persistence for quiz history, user interests, and performance
-        tracking with structured indexed queries.
-      # METRIC NEEDED: Was this graded or presented? If it received a score or was
-      # demoed to faculty/industry judges, mention the outcome.
-      - Built navigation routing and dashboard UI using Jetpack Compose and Hilt DI,
-        wiring real-time Firebase data into a modular MVVM architecture.
+      # METRIC NEEDED: Outcome of presentation/grading (score, faculty recognition, etc.).
+      - Delivered modular Android quiz app with 4-member team in under 2 weeks, pre-loaded with 150
+        questions across 30 quizzes and 5 categories.
+      - Kept all data ops off the main thread with Kotlin Flow and Coroutines, ensuring zero UI jank
+        for 150 questions and 600 answer options.
+      - Built Room-based persistence for quiz history, user interests, and performance tracking with
+        indexed queries.
