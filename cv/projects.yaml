@@ -7,12 +7,9 @@ projects:
     startDate: 2025-01-01
     endDate: present
     highlights:
-      - Architected 5 AWS services (S3, SQS, SNS, DynamoDB, Cognito) behind 8 REST endpoints secured
-        with Spring Security and Cognito JWT validation.
-      - Built a single-table DynamoDB schema tracking 4 document states (QUEUED → PROCESSING →
-        COMPLETED/FAILED) with per-document timestamps and user association.
-      - Eliminated server-side file handling by using S3 presigned URLs for all uploads/previews,
-        reducing attack surface and server load.
+      - Architected a cloud-native document processing backend across 5 AWS services (S3, SQS, SNS, DynamoDB, Cognito) with 8 secured REST endpoints using Spring Security and Cognito JWT validation.
+      - Eliminated server-side file handling entirely via S3 presigned URLs for all uploads and previews, reducing attack surface and server load.
+      - Designed a single-table DynamoDB schema tracking 4 document states (QUEUED → PROCESSING → COMPLETED/FAILED) with per-document timestamps and user association.
       # METRIC NEEDED: Max concurrent uploads handled or number of test documents validated during
       # integration testing.
       - Achieved 5–10s end-to-end processing latency per document, covering extraction, word count,
@@ -24,15 +21,10 @@ projects:
     startDate: 2024-01-01
     endDate: present
     highlights:
-      - Cut developer environment setup from hours to one command with a declarative NixOS config
-        (automated LSP, shell tooling, editor via NixVim for 8 languages).
-      - Pinned 24 dependencies with Nix Flakes for bit-for-bit reproducible rebuilds, eliminating
-        environment drift.
-      - Enforced CI validation (GitHub Actions) and binary caching (Cachix) so every config change
-        is verified buildable before merge.
-      - Modularized configuration into reusable host/user layers (192 files), enabling atomic upgrades
-        and instant rollback with no manual steps.
-      # METRIC NEEDED: Actual rebuild or rollback time (e.g., “sub-60-second rollback”).
+      - Reduced developer environment setup from 5–6 hours to under 10 minutes with a declarative NixOS config, automating LSP, shell tooling, and editor (NixVim) across 8 languages.
+      - Pinned 24 dependencies with Nix Flakes for bit-for-bit reproducible rebuilds, eliminating environment drift across machines.
+      - Enforced CI validation (GitHub Actions) and binary caching (Cachix) so every config change is verified buildable before merge.
+      - Modularized configuration into reusable host/user layers enabling atomic upgrades and instant rollback to any previous working generation in under 4 seconds — no manual intervention required.
 
   - name: Organisation-Centric Project Management System (OCPMS)
     url: null
@@ -40,18 +32,13 @@ projects:
     startDate: 2024-08-01
     endDate: present
     highlights:
-      - Built full-stack project management platform with 16 REST endpoints (tasks, projects, real-time
-        chat), backed by MongoDB and Node.js/Express.
-      - Replaced polling with SSE for real-time chat, removing redundant HTTP overhead while persisting
-        full message history in MongoDB.
-      - Implemented role-based auth (Passport.js, bcrypt) across admin, manager, member tiers on all
-        16 API routes.
-      - Tracked task lifecycle (Todo → In Progress → Done) with assignment workflows and deadline-aware
-        completion monitoring.
-      # METRIC NEEDED: Complexity of analytics pipelines (e.g., “3 aggregation pipelines across
-      # X collections”).
-      - Built analytics dashboards (task distribution, monthly trends, late submissions) using MongoDB
-        aggregation pipelines and Chart.js.
+      - Built a full-stack project management platform with 16 REST endpoints (tasks, projects, real-time chat), backed by MongoDB and Node.js/Express.
+      - Replaced polling with SSE for real-time chat, eliminating redundant HTTP overhead while persisting full message history in MongoDB.
+      - Implemented role-based auth (Passport.js, bcrypt) across admin, manager, and member tiers on all 16 API routes.
+      - Tracked task lifecycle (Todo → In Progress → Done) with assignment workflows and deadline-aware completion monitoring.
+      # METRIC NEEDED: Complexity of analytics pipelines (e.g., "3 aggregation pipelines across
+      # X collections").
+      - Built analytics dashboards (task distribution, monthly trends, late submissions) using MongoDB aggregation pipelines and Chart.js.
 
   - name: NoteQuest
     url: https://github.com/hamburg1r/notequest
@@ -59,13 +46,10 @@ projects:
     startDate: 2025-01-01
     endDate: present
     highlights:
-      - Offline-first Flutter productivity app with full task, note, and calendar functionality
-        independent of network state.
-      - Designed local persistence with Hive (4 typed boxes) supporting hierarchical tasks
-        (subtasks/parent linkage) — zero network dependency for reads/writes.
-      - Enforced compile-time state safety via Riverpod and Freezed immutable models across 10
-        providers, eliminating runtime null errors.
-      # METRIC NEEDED: App store presence or user count (e.g., “published to Play Store, X downloads”).
+      - Offline-first Flutter productivity app with full task, note, and calendar functionality independent of network state.
+      - Designed local persistence with Hive (4 typed boxes) supporting hierarchical tasks (subtasks/parent linkage) — zero network dependency for reads/writes.
+      - Enforced compile-time state safety via Riverpod and Freezed immutable models across 10 providers, eliminating runtime null errors.
+      # METRIC NEEDED: App store presence or user count (e.g., "published to Play Store, X downloads").
 
   - name: SmartQuiz
     url: https://github.com/LXXPK/Quiz-Android-App
@@ -74,9 +58,6 @@ projects:
     endDate: 2024-01-01
     highlights:
       # METRIC NEEDED: Outcome of presentation/grading (score, faculty recognition, etc.).
-      - Delivered modular Android quiz app with 4-member team in under 2 weeks, pre-loaded with 150
-        questions across 30 quizzes and 5 categories.
-      - Kept all data ops off the main thread with Kotlin Flow and Coroutines, ensuring zero UI jank
-        for 150 questions and 600 answer options.
-      - Built Room-based persistence for quiz history, user interests, and performance tracking with
-        indexed queries.
+      - Delivered modular Android quiz app with a 4-member team in under 2 weeks, pre-loaded with 150 questions across 30 quizzes and 5 categories.
+      - Kept all data ops off the main thread with Kotlin Flow and Coroutines, ensuring zero UI jank for 150 questions and 600 answer options.
+      - Built Room-based persistence for quiz history, user interests, and performance tracking with indexed queries.

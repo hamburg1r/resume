@@ -5,21 +5,20 @@ work:
     url: https://www.encora.com
     location: New Delhi, India
     positions:
-      - position: Software Engineer Trainee
+      - position: Software Consultant
         startDate: 2025-08-04
         endDate: 2026-04-23
         highlights:
-          # METRIC NEEDED: Environment reached (staging/demo/production)? Mention “delivered to
-          # internal demo environment” or similar.
-          - Owned backend architecture for a cloud document processing platform integrating S3, SQS, SNS,
-            DynamoDB, and Cognito. Shipped a demo-ready system with a 4-person team in under 2 weeks.
-          - Designed an SQS-driven async pipeline that decoupled upload from processing, delivering 5–10s
-            end-to-end latency per document (file extraction, word count, S3 upload, SNS trigger).
-          - Hardened 8 REST endpoints with JWT + Cognito, enforcing role-based access across all
-            upload, processing, and status workflows.
-          # METRIC NEEDED: If you built most of the UI, specify e.g. “owned X of Y screens.”
-          - Built navigation and dashboard UI for an internal Android quiz app (Jetpack Compose, Hilt DI,
-            Firebase RTDB) across a 4-person team.
+          # METRIC NEEDED: Original estimate (e.g., "delivered in 2 weeks against a 4-week estimate").
+          - Led backend development for a cloud document processing platform; delivered a fully functional
+            system with a 4-person team in under 2 weeks.
+          - Designed an SQS-driven async pipeline decoupling upload from processing, achieving 5–10s
+            end-to-end latency per document across extraction, word count, S3 upload, and SNS notification.
+          - Secured 8 REST endpoints with JWT + AWS Cognito, implementing role-based access control
+            across all upload, processing, and status workflows.
+          # METRIC NEEDED: Number of screens owned (e.g., "owned 4 of 6 screens").
+          - Built navigation and dashboard UI for an internal Android quiz app using Jetpack Compose,
+            Hilt DI, and Firebase RTDB.
 
   # - organization: Coforge
   #   url: https://www.coforge.com
