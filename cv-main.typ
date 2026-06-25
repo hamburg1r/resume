@@ -3,11 +3,12 @@
 #let education = yaml("cv/education.yaml")
 #let misc = yaml("cv/misc.yaml")
 #let personal = yaml("cv/personal.yaml")
+#let summary = yaml("cv/summary.yaml")
 #let projects = yaml("cv/projects.yaml")
 #let skills = yaml("cv/skills.yaml")
 #let work = yaml("cv/work.yaml")
 
-#let cvdata = personal + skills + projects + work + education + misc
+#let cvdata = personal + summary + skills + projects + work + education + misc
 
 #let uservars = (
     headingfont: "Garamond Libre",
@@ -52,11 +53,23 @@
 // each section body can be overridden by re-declaring it here
 // #let cveducation = []
 
+#let cvsummary(info, title: "Summary", isbreakable: true) = {
+  let summary = info.summary
+  if summary != none and summary != "" {
+    block(breakable: isbreakable)[
+      == #title
+      #eval(summary, mode: "markup")
+      #v(0.3em)  // adds a little breathing room below the summary
+    ]
+  }
+}
+
 // ========================================================================== //
 
 #show: doc => cvinit(doc)
 
 #cvheading(cvdata, uservars)
+#cvsummary(cvdata)
 #cveducation(cvdata)
 
 #cvwork(cvdata)
