@@ -1,6 +1,18 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/imprecv/main/cv.typ.schema.json
 
 projects:
+  - name: LedgerFlow
+    url: null
+    affiliation: Personal Project (In Progress)
+    startDate: 2026-05-09
+    endDate: present
+    highlights:
+      - Designing a double-entry ledger platform with transaction orchestration, account management, and audit trails, ensuring every monetary movement remains balanced and traceable.
+      - Implemented idempotent transaction processing and state-driven workflows (CREATED → PROCESSING → SUCCESS/FAILED → REVERSED) to prevent duplicate execution under retries and network failures.
+      - Modeled transaction reversals as first-class financial events, preserving immutable ledger history.
+      - Architecting service boundaries between User, Account, Transaction, and Ledger domains with ownership validation and authorization checks enforced before fund movement.
+      - Evaluating event-driven patterns and Saga-based recovery strategies for cross-service consistency in distributed transaction processing.
+
   - name: Document Processing System
     url: https://github.com/hamburg1r/capston
     affiliation: Personal Project
@@ -10,10 +22,8 @@ projects:
       - Architected a cloud-native document processing backend across 5 AWS services (S3, SQS, SNS, DynamoDB, Cognito) with 8 secured REST endpoints using Spring Security and Cognito JWT validation.
       - Eliminated server-side file handling entirely via S3 presigned URLs for all uploads and previews, reducing attack surface and server load.
       - Designed a single-table DynamoDB schema tracking 4 document states (QUEUED → PROCESSING → COMPLETED/FAILED) with per-document timestamps and user association.
-      # METRIC NEEDED: Max concurrent uploads handled or number of test documents validated during
-      # integration testing.
-      - Achieved 5–10s end-to-end processing latency per document, covering extraction, word count,
-        S3 upload, and async SQS/SNS trigger.
+      # METRIC NEEDED: Max concurrent uploads handled or number of test documents validated during integration testing.
+      - Achieved 5–10s end-to-end processing latency per document, covering extraction, word count, S3 upload, and async SQS/SNS trigger.
 
   - name: NixOS System Configuration & Automation
     url: https://github.com/hamburg1r/nixos
@@ -28,7 +38,7 @@ projects:
 
   - name: Organisation-Centric Project Management System (OCPMS)
     url: null
-    affiliation: Personal Project
+    affiliation: Minor Degree Project
     startDate: 2024-08-01
     endDate: present
     highlights:
@@ -36,13 +46,12 @@ projects:
       - Replaced polling with SSE for real-time chat, eliminating redundant HTTP overhead while persisting full message history in MongoDB.
       - Implemented role-based auth (Passport.js, bcrypt) across admin, manager, and member tiers on all 16 API routes.
       - Tracked task lifecycle (Todo → In Progress → Done) with assignment workflows and deadline-aware completion monitoring.
-      # METRIC NEEDED: Complexity of analytics pipelines (e.g., "3 aggregation pipelines across
-      # X collections").
+      # METRIC NEEDED: Complexity of analytics pipelines (e.g., "3 aggregation pipelines across X collections").
       - Built analytics dashboards (task distribution, monthly trends, late submissions) using MongoDB aggregation pipelines and Chart.js.
 
   - name: NoteQuest
     url: https://github.com/hamburg1r/notequest
-    affiliation: Personal Project
+    affiliation: Major Degree Project
     startDate: 2025-01-01
     endDate: present
     highlights:
